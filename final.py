@@ -146,7 +146,6 @@ if os.path.exists(train_dir):
 else:
     print(f"Training directory NOT found: {train_dir}")
 
-    !unzip -o eyeglasses-segmentation-dataset.zip -d /content # Unzip again if extracted to an incorrect location
 
 if os.path.exists(test_dir):
     print(f"Testing directory found: {test_dir}")
