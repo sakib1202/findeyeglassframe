@@ -146,7 +146,6 @@ if os.path.exists(train_dir):
 else:
     print(f"Training directory NOT found: {train_dir}")
 
-!unzip -o eyeglasses-segmentation-dataset.zip -d /content
 if os.path.exists(test_dir):
     print(f"Testing directory found: {test_dir}")
 else:
@@ -156,7 +155,6 @@ if os.path.exists(frame_dir):
     print(f"Training directory found: {frame_dir}")
 else:
     print(f"Training directory NOT found: {frame_dir}")
- !unzip -o eyeglasses-segmentation-dataset.zip -d /content
 
 train_data = train_datagen.flow_from_directory(
     train_dir,
