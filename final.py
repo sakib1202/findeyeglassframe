@@ -158,7 +158,7 @@ if os.path.exists(frame_dir):
 else:
     print(f"Training directory NOT found: {frame_dir}")
 
-    !unzip -o eyeglasses-segmentation-dataset.zip -d /content
+   subprocess.run(["unzip", "-o", "eyeglasses-segmentation-dataset.zip", "-d", "/content"], check=True)
 
 train_data = train_datagen.flow_from_directory(
     train_dir,
