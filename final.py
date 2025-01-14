@@ -11,6 +11,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.optimizers import Adam
 import pandas as pd
+!pip install opencv-python
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
