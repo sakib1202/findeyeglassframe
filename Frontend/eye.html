@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyeglass Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bb.jpg'); /* Replace with your image path or URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 10px 20px;
+        }
+
+        .center-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Show menu when hovering over the hamburger or the menu */
+        .hamburger:hover + .menu,
+        .menu:hover {
+            display: flex;
+        }
+
+        /* Animation for hamburger bars on hover */
+        .hamburger:hover div:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger:hover div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger:hover div:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            margin: 20px 0;
+            font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #575757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="123.png" alt="Logo"> <!-- Replace '123.png' with your logo path -->
+            <span></span>
+        </div>
+        <!-- Centered Title -->
+        <div class="center-title">Eyeglass Recommendation</div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Dropdown Menu -->
+        <div class="menu">
+            <a href="#about-us">About Us</a>
+            <a href="#frames">Frames</a>
+            <a href="#account">Account</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Get Your Frame Prediction</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label for="file">Upload a face image:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
