@@ -1,5 +1,5 @@
-pip install flask tensorflow pillow numpy
-pip freeze > requirements.txt
+!pip install flask tensorflow pillow numpy
+!pip freeze > requirements.txt
 flask==2.3.3
 tensorflow==2.14.0
 pillow==10.0.0
