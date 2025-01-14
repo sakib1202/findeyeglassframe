@@ -157,7 +157,7 @@ if os.path.exists(frame_dir):
     print(f"Training directory found: {frame_dir}")
 else:
     print(f"Training directory NOT found: {frame_dir}")
-
+import subprocess
    subprocess.run(["unzip", "-o", "eyeglasses-segmentation-dataset.zip", "-d", "/content"], check=True)
 
 train_data = train_datagen.flow_from_directory(
