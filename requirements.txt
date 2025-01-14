@@ -2,3 +2,6 @@ flask
 tensorflow
 pillow
 numpy
+git add requirements.txt main.py
+git commit -m "Add gunicorn and fix deployment"
+git push
